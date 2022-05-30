@@ -1,0 +1,35 @@
+* {
+    font-size: 30px;
+
+}
+
+h1 {
+    font-size: 50px;
+    color: red;
+}
+
+ins {
+    font-size: 50px;
+    color: red;
+
+}
+
+em {
+    color: green;
+}
+
+.error-bg{
+
+}
+.ex{
+    width: 100%;
+    height: 800px;
+    background-image: url('https://ss-images.saostar.vn/qwwebp700/2019/03/04/4702186/p2b.jpg'), url('https://ss-images.saostar.vn/wwebp700/2019/03/04/4702186/p1c.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    line-height: 1350px;
+    color: red;
+    font-weight: bold;
+    font-style: oblique;
+}

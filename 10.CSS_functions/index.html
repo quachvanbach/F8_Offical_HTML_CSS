@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS functions</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="exrgb">Function mã màu đặc. Ví dụ: background: rgb(231, 19, 19)</div>
+    <div class="exrgba">Function mã màu, có thể cải chỉ số thứ tư để chỉnh độ trong suốt. Ví dụ: background: rgb(231, 19, 19, o.5)</div>
+    <div class="excalc">Function dùng tính toán. Ví dụ:  width: calc(50% + 100px)</div>
+    <div class="exattr">
+        <h1>Ví dụ</h1>
+        <p>Ta khai báo lớp giả:</p>
+        <h2>a::before {content: "(" attr(href) ") ";} </h2>
+        <h2>a::after  { content: " (" attr(href) ")";} </h2>
+        <p>vào trong thẻ style. Thêm 1 thẻ a có href="http://google.com"</p>
+        <P>Ta được </p>
+        <a href="http://google.com">Tới trang tìm kiếm</a>
+        <p>Đường link trong dấu ngoặc sẽ được tự động thay đổi khi ta thay đổi giá trị href</p>
+    </div>
+</body>
+</html>

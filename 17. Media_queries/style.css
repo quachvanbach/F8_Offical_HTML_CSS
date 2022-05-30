@@ -1,0 +1,33 @@
+*{
+    font-size: 30px;
+    
+}
+
+h1{
+    text-align: center;
+}
+
+.PC, .Tablet, .Mobile{
+    display: none;
+}
+
+/* PC */
+@media (min-width: 1024px) {
+    .PC{
+    display: block;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .Tablet{
+        display: block;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .Mobile{
+        display: block;
+    }
+}

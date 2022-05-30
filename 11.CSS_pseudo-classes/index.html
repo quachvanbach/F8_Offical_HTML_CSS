@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS pseudo-classes ( Lớp giả )</title>
+    <link rel="stylesheet" href="style.css">
+   <style>
+       #paragraph1::after, #paragraph2::after, #paragraph3::after {
+           content: "(" attr(id) ")";
+           color: rgb(102, 94, 175);
+           font-style: italic;
+       }
+   </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Một số lớp giả hay dùng</h1>
+        <ol>
+            <li>:root : Tham chiếu đến 1 phần từ trong chính file html.</li>
+            <li>:hover  : Kích hoạt trạng thái CSS đặc biệt của 1 phần tử khi được di chuột vào.</li>
+            <li>:active  : Kích hoạt trạng thái CSS đặc biệt của 1 phần tử khi được click và giữ chuột, giả chuột sẽ mất tác dụng </li>
+            <li>:first-child  : CSS đến phần tử con đầu tiên trong 1 tập hợp các phần tử </li>
+            <li>:last-child  : CSS đến phần tử con cuối cùng trong 1 tập hợp các phần tử </li>
+        </ol>
+    </div>
+    <div class="exroot">
+        <p id="paragraph1">Ta đặt 1 lớp giả <p class="italic">:root { --text-color: green }</p></p>
+        <p id="paragraph2">Từ giờ giá trị của biến --text-color sẽ có màu green. Khi cần gọi lại giá trị biến đó. Ta ghi thuộc tính và gọi ra biến đó như sau: <p class="italic">color: var(--text-color)</p></p>
+        <h1>Ví dụ</h1>
+        <h2 class="italic">:root { <br>
+            --text-color: green; <br>
+        } <br><br>
+        #paragraph1{ <br>
+            color: var(--text-color) <br>
+        } <br><br>
+        #paragraph2{ <br>
+            color: var(--text-color) <br>
+        } <br><br>
+        #paragraph3{ <br>
+            color: var(--text-color) <br>
+        } <br>
+        </h2>
+        <p id="paragraph3">Sau này khi ta thay đổi giá trị của biến --text-color thì tất cả những nơi có gọi đến biến --text-color đều được đổi màu</p>
+
+
+    </div>
+    <div class="exhover">
+        <h1>Ví dụ</h1>
+        <h2 class="italic">#box-1:hover { <br>
+            background-color: red; <br>
+            color: rgb(0, 4, 255); <br>
+            font-size: 30px; <br>
+        }</h2><br>
+        <div class="box" id="box-1">Di chuột vào đây</div>
+    </div>
+    <div class="exactive">
+        <h1>Ví dụ</h1>
+        <h2 class="italic">#box-2:active { <br>
+            background-color: red; <br>
+            color: rgb(0, 4, 255); <br>
+            font-size: 30px; <br>
+        } <br>
+    </h2>
+        <div class="box" id="box-2" >Click chuột vào đây</div>
+    </div>
+    </div>
+    <div class="exfirstchild">
+        <h1>Ví dụ first-child</h1>
+        <h2 class="italic">li.exfirstchild-list:first-child<br>{<br>color:red<br>}</h2>
+        <ol>
+            <li class="exfirstchild-list">Item đầu tiên</li>
+            <li class="exfirstchild-list">Item thứ 2</li>
+            <li class="exfirstchild-list">Item thứ 3</li>
+            <li class="exfirstchild-list">item thứ 4</li>
+            <li class="exfirstchild-list">Item cuối cùng</li>
+        </ol>
+    </div>
+    <div class="exlastchild">
+        <h1>Ví dụ: last-child</h1>
+        <h2 class="italic">li.lastchild-list:last-child<br>{<br>color:blue<br>}</h2>
+        <ol>
+            <li class="exlastchild-list">Item đầu tiên</li>
+            <li class="exlastchild-list">Item thứ 2</li>
+            <li class="exlastchild-list">Item thứ 3</li>
+            <li class="exlastchild-list">item thứ 4</li>
+            <li class="exlastchild-list">Item cuối cùng</li>
+        </ol>
+    </div>
+</body>
+</html>

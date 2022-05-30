@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS position</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="porelative">
+        <div class="box">
+            <h1 class="h1-relative">Relative</h1>
+            <h2>.h1-relative {<br>
+                position: relative;<br>
+                top: 200px;<br>
+                }</h2>
+            <p>Với thuộc tính "position: relative". Phần tử được CSS sẽ lấy chính vị trí của nó đang đứng làm gốc toạ
+                độ. Và t có thể tự do css vị trí của nó. Có thể cho nó đè lên phần tử khác.</p>
+        </div>
+        <div class="poabsolute">
+            <div class="box">
+                <h1>Absolute</h1>
+                <p>Với thuộc tính "position: absolute". Phần tử được CSS sẽ bị phụ thuộc vào thẻ cha gần nhất có chứa
+                    thuộc tính position làm gốc toạ độ.</p>
+                <div class="box-dad">
+                    <h2>.box-dad { <br>
+                        width:100%;<br>
+                        height:450px;<br>
+                        border: solid 1px green ;<br>
+                        background-color: rgb(154, 129, 241);<br>
+                        position: relative;<br>
+                        }
+                    </h2>
+                    <div class="box-child">
+                        <h2>.box-child {<br>
+                            width: 200px;<br>
+                            height: 200px;<br>
+                            background-color: blue;<br>
+                            position: absolute;<br>
+                            top: 0px;<br>
+                            right: 0px;<br>
+                            }</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pofixed">
+            <h1>Fixed</h1>
+            <div class="box" style="margin-bottom: 350px;">
+                Với thuộc tính "position: fixed. Phần tử được CSS sẽ lấy chính cửa sổ trình duyệt làm gốc toạ độ. Và sẽ
+                được ghim tại vị trí đó khi cuộn cửa sổ trình duyệt"
+                <div class="box-fixed">
+                    <h2 style="color: rgb(43, 255, 0)">.box-fixed{<br>
+                        height:fit-content;{<br>
+                        background: rgb(97, 106, 228);{<br>
+                        position: fixed;{<br>
+                        bottom:0;{<br>
+                        left:0;{<br>
+                        right: 0;{<br>
+                        }
+                </div>
+            </div>
+        </div>
+        <div class="posticky">
+            <h1>Sticky</h1>
+            <p>Ngoài ra còn có thuộc tính "position: sticky". Nhưng vì nó còn hạn chế trình duyệt nên ít được sử dụng.
+            </p>
+            <div>
+                <p class="more">Xem thêm tại </h3><a class="more"
+                        href="https://www.youtube.com/watch?v=y0WuNaMgwpc&list=PL_-VfJajZj0U9nEXa4qyfB4U5ZIYCMPlz&index=30">đây</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

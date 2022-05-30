@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS background-image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Background-image: sử dụng hình ảnh làm background</h1>
+        <div style="margin:10px">
+            <p>background-image: nhập giá trị là link ảnh</p>
+            <p>background-size: kích thước ảnh, có thể đặt 1 hoặc 2 giá trị. Nếu đặt 1 giá trị, giá trị đó được hiểu là
+                chiều dọc. Nếu đặt 2 giá trị, giá trị thứ 2 được hiểu là chiều cao của ảnh</p>
+            <p>background-repeat: mặc định sẽ là giá trị repeat. ảnh sẽ được lặp đi lặp lại để lắp đầy thẻ đó. Ta có thể
+                đặt các giá trị khác là: no-repeat (không lặp lại), repeat-x (lặp lại chiều ngang), repeat-y (lặp lại
+                chiều dọc)</p>
+            <h2>Có thể đặt nhiều hình ảnh làm background. Url ảnh nào viết trước sẽ được ưu tiên hiển thị ở trên.</h2>
+        </div>
+    </div>
+    <div class="background-body"></div>
+    <div class="bottom">
+        <h1 style="margin:20px">Ngoài đặt hình ảnh làm background, ta có thể đặt 1 dải màu chuyển làm background bằng cách đưa vào giá trị
+            "linear-gradient("góc xoay", "màu đầu", "màu cuối"). Nếu không set giá trị góc xoay, thì góc xoay mặc định
+            sẽ là 180 độ (tử trên xuống dưới).
+        </h1>
+
+        <div class="background-bottom"></div>
+    </div>
+    
+    <div class="mix">Kết hợp ảnh và dải màu chuyển.
+
+    </div>
+</body>
+
+</html>

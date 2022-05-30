@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS pseudo elements ( phần tử giả )</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="pebefore">
+        <div class="box" id="before">
+            <h1>::before : Css cho phần sau của 1 thẻ.</h1>
+            <h2>.box::before {<br>
+                content: ""; <br>
+                display: block; <br>
+                width:100px;<br>
+                height: 100px;<br>
+                background-color: rgb(255, 0, 0);<br>
+                }</h2>
+        </div>
+    </div>
+    <div class="peafter">
+
+        <div class="box" id="after">
+            <h1>::after : Css cho phần sau của 1 thẻ.</h1>
+            <h2>.box::after {<br>
+                content:"";<br>
+                display: block;<br>
+                width: 200px;<br>
+                height:200px;<br>
+                background-color: blue;<br>
+                }</h2>
+        </div>
+    </div>
+    <div class="pefirstletter">
+        <div class="box">
+            <h1>::first-letter : Css cho chữ cái đầu tiên của thẻ</h1>
+            <p class="letter">Cú pháp CSS: <br> p.letter::first-letter{ <br>
+                color: blue;<br>
+                font-size: 50px;<br>
+                }</p>
+        </div>
+    </div>
+    <div class="pefirstline">
+        <div class="box">
+            <h1>::first-line : Css cho dòng đầu tiên của thẻ.</h1>
+            <p class="line">Cú pháp CSS: <br> p.line::first-line{ <br>
+                color: blue;<br>
+                font-size: 50px;<br>
+                }</p>
+        </div>
+    </div>
+    <div class="peselection">
+        <div class="box">
+            <h1>::selection : Css phần được lựa chọn ( bôi đen ) </h1>
+            <h2>Lựa chọn ( bôi đen ) phần văn bản bên dưới đây: </h2>
+            <p class="selection">Cú pháp CSS: <br> p.selection::selection{ <br>
+                color: blue;<br>
+                font-size: 50px;<br>
+                }</p>
+        </div>
+    </div>
+</body>
+
+</html>

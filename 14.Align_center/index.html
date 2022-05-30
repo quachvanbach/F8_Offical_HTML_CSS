@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các cách căn giữa trong css</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="align">
+        <h1 class>Căn giữa 1 item trong 1 box</h1>
+        <h2>Ta có:</h2>
+        <p>Thẻ <em> div class="box"</em> <br>
+            Thẻ<em> h1</em> có nội dung: <em>Center</em>
+    </div>
+    <p>Ta có nhiều cách để căn giữa h1 có nội dung <strong>Center</strong> trong box</p>
+    <h2><ins>Cách 1</ins>: Dùng <em>text-align</em> và <em>line-height</em>.</h2>
+    <h3>Theo chiều ngang:</h3>
+    <ul>
+        <li>Ta thêm thuộc tính <em>text-align</em> vào trực tiếp thẻ h1.</p>
+            <em>h1{ <br> text-align: center <br> }</em>
+        </li>
+        <p>hoặc</p>
+        <li> Vì thuộc tính <em>text-align</em> có tính chất kế thừa nên ta có thể thêm nó vào thẻ chứa
+            (ở đây là thẻ div.box).
+            <p><em>.box { <br> text-align: center; <br> }</em></p>
+        </li>
+    </ul>
+    <h3>Tương tự với chiều dọc:</h3>
+    <ul>
+        <li> Ta thêm thuộc tính <em>line-height</em> vào trực tiếp thẻ h1.
+        <p><em>h1 line-height: (chiều cao của div.box)</em></p></li>
+        <p>hoặc</p>
+        <li>Vì thuộc tính <em>line-height</em> có tính chất kế thừa nên ta có thể thêm nó vào thẻ chứa
+            (ở đây là thẻ div.box)
+            <p><em>line-height: (chiều cao của div.box)</em></p></li></li>
+    </ul>
+
+    <h2><ins>Cách 2:</ins> Sử dụng thuộc tính <em>display: flex</em> cho thẻ chứa (div.box).</h2>
+    <ul>
+        <li>Cho thẻ h1 thuộc tính <em>margin:auto</em>.</li>
+        <p>hoặc</p>
+        <li>Thêm thuộc tính <em>align-items</em>(căn theo chiều dọc) và <em>justify-content</em>(căn theo chiều
+            ngang) vào thẻ chứa (div.box)</li>
+    </ul>
+    <h2><ins>Cách 3:</ins> Sử dụng thuộc tính <em>position</em> cho thẻ h1.</h2>
+    <p>Cho thẻ div.box có <em>position: relative</em>. Thẻ h1 có <em>position: absolute</em>; <em>top: 50%</em> ;
+        <em>left: 50%</em> ; <em>transform: translate(-50%, -50%)</em>
+    </p>
+    Ta đều có được kết quả là h1 <strong>Center</strong> được căn giữa cả theo chiều dọc và chiều ngang.
+    </p>
+
+    </div>
+    <div class="box"><h1>Center</h1></div>
+
+</body>
+
+</html>

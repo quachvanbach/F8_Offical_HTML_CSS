@@ -1,0 +1,46 @@
+* {
+    font-size: 30px;
+
+}
+
+h1 {
+    font-size: 50px;
+    color: red;
+}
+
+div+div {
+    margin-top: 30px;
+}
+
+.exrgb {
+    width: 100%;
+    height: 200px;
+    background: rgb(231, 19, 19);
+}
+
+.exrgba {
+    width: 100%;
+    height: 200px;
+    background: rgba(231, 19, 19, 0.5);
+}
+
+.excalc {
+    width: calc(50% + 100px);
+    height: 200px;
+    background: rgb(55, 91, 255);
+}
+
+.exattr {
+    width: 100%;
+    height: fit-content;
+    background: rgb(247, 189, 189);
+    margin-bottom: 30px;
+}
+
+a::before
+{
+    content: "(" attr(href) ") ";
+}
+a::after{
+    content: " (" attr(href) ")";
+}

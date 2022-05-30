@@ -1,0 +1,49 @@
+* {
+    font-size: 30px;
+
+}
+
+h1 {
+    font-size: 50px;
+    color: red;
+}
+
+.box {
+    background-color: rgb(168, 176, 230);
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 3px;
+}
+
+#before.box::before {
+    content: "";
+    /*Thêm content khi trong thẻ có content, không có content thì có thể để rỗng nhưng thuộc tính thì bắt buộc phải có.*/
+    display: block;
+    /*Cần thêm thuộc tính block. Vì mặc định của thẻ div có thuộc tính block, còn element ::before không có thuộc tính block*/
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+}
+
+#after.box::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+p.letter::first-letter {
+    color: blue;
+    font-size: 50px;
+}
+
+p.line::first-line {
+    color: blue;
+    font-size: 50px;
+}
+
+p.selection::selection{ 
+    color: blue;
+    background-color: rgb(119, 240, 108);
+}

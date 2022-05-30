@@ -1,0 +1,26 @@
+*{
+    font-size: 30px;
+    
+}
+h1{
+    font-size: 50px;
+    color: red;
+}
+.background-body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://i.pinimg.com/564x/f3/24/71/f324713ba73fb15ff1011205fd261b4c.jpg);
+    background-repeat: no-repeat;
+    background-size: 200px;
+    box-sizing: border-box;
+    text-align:center;
+    border: 2px dashed ;
+    color: blue;
+    margin-top: 30px;
+}
+
+.top-right{background-position: top right;}
+
+.bottom{background-position: bottom;}
+
+.absolute{background-position: 100px;}

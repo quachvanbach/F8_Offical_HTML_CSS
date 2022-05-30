@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị ảnh dự phòng khi ảnh chính lỗi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="erro-load">
+        <h1><ins>Trường hợp 1</ins>: Lỗi ảnh minh hoạ.</h1>
+        <h2>Với trường hợp lỗi ảnh minh hoạ. Ta đưa thêm attribute <em>onerror="this.src='link_ảnh_thay_thế'"</em> vào
+            thẻ img</h2>
+        <h2>Ví dụ:</h2>
+        <div><img
+                onerror="this.src='https://ss-images.saostar.vn/wwebp700/2019/03/04/4702186/26231776_212102612697707_7460372596071093635_n.jpg', this.title='Ảnh thay thế'"
+                src="https://liastphim.com/wp-content/uploads/2019/03/b90e7bec54e736d1befe5cba90504fc2d4626997.jpg">
+        </div>
+    </div>
+    <div class="error-bg">
+        <h1><ins>Trường hợp 2</ins>: Lỗi background</h1>
+        <h2 class="h2-bg">Với trường hợp lỗi ảnh minh hoạ. Ta chỉ cần chèn thêm 1 đường dẫn ảnh dự phòng vào sau link background chính. phân cách bới dấu phẩy (),)</h2>
+        <div class="ex">Đây là background thay thế.</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+* {
+    font-size: 30px;
+
+}
+
+h1 {
+    font-size: 50px;
+    color: red;
+}
+
+.heading {
+    width: 100%;
+    height: fit-content;
+    background: rgb(198, 228, 118);
+    padding: 5px;
+    background-clip: padding-box;
+}
+
+.italic {
+    font-style: italic;
+    color: rgb(109, 109, 109)
+}
+
+
+.exroot {
+    margin: 30px 5px;
+    border: 2px dashed;
+}
+
+:root {
+    --text-color: green;
+}
+
+.exroot h2 {
+    margin-left: 10px
+}
+
+#paragraph1 {
+    color: var(--text-color)
+}
+
+#paragraph2 {
+    color: var(--text-color)
+}
+
+#paragraph3 {
+    color: var(--text-color)
+}
+
+.exhover {
+    margin: 30px 5px;
+    border: 2px dashed;
+}
+
+.exactive {
+    margin: 30px 5px;
+    border: 2px dashed;
+
+}
+
+div.exfirstchild {
+    margin: 30px 5px;
+    border: 2px dashed;
+}
+
+div.exlastchild {
+    margin: 30px 5px;
+    border: 2px dashed;
+}
+
+
+.box {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 5px;
+    background-color: rgb(113, 247, 113);
+}
+
+#box-1:hover {
+    background-color: red;
+    color: rgb(0, 4, 255);
+    font-size: 30px;
+}
+
+#box-2:active {
+    background-color: red;
+    color: rgb(0, 4, 255);
+    font-size: 30px;
+}
+
+li.exfirstchild-list:first-child {
+    color: red
+}
+
+li.exlastchild-list:last-child {
+    color: blue
+}
