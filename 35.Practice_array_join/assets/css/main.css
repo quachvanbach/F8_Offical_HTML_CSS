@@ -70,12 +70,3 @@ table, th, td {
 p.numerical-order-extra {
 
 }
-
-iframe {
-    width: 100%;
-    min-height: 800px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}

@@ -15,8 +15,20 @@
 </head>
 
 <body>
+    <h1>Hàm kiểm tra kiểu dữ liệu chuỗi đơn giản nhất. Không áp dụng với number. Vì với cách này thì khi giá trị đưa vào
+        là NaN thì kết quả vấn sẽ trở về true</h1>
+    <p><em>function isNumber(value) { <br>
+            return typeof value === 'string'; <br>
+            }</em></p>
 
-
+    <h1>Hàm kiểm tra dữ liệu số: </h1>
+    <p><em>function isNumber (value) { <br>
+            if (Number.isFinite(value)){ <br>
+            return true ; <br> 
+            }else { <br>
+            return false; <br>
+            } <br>
+            }</em></p>
 
     <script src="./assets/js/main.js"></script>
 </body>

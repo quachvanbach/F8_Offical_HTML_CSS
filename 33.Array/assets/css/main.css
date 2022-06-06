@@ -11,7 +11,7 @@ html {
 body{
     font-size: 2rem;
     width: 1200px;
-    margin: 20rem auto 30rem;
+    margin: 0 auto 30rem;
     background-color: rgb(226, 226, 226);
 }
 
@@ -29,7 +29,7 @@ h1{
 h2{
     margin-top: 5rem;
     font-size: 3rem;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 h3{
@@ -69,13 +69,4 @@ table, th, td {
 
 p.numerical-order-extra {
 
-}
-
-iframe {
-    width: 100%;
-    min-height: 800px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
 }

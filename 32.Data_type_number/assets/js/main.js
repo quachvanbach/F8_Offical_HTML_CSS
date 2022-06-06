@@ -10,3 +10,23 @@ console.log('console.log(type PI.toString()) : ' + typeof PI.toString())
 console.log('')
 console.log('2. To Fixed: Dùng trong trường hợp làm tròn số.')
 console.log('console.log(PI.toFixed(2)) : ' + PI.toFixed(2))
+console.log('')
+console.log('Kiểm tra kiểu dữ liệu')
+function isNumber(value) {
+    if (Number.isFinite(value)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function isString(value) {
+    return typeof value === 'string';
+}
+console.log('Kiểm tra số')
+console.log(isNumber(100))
+console.log(isNumber('100'))
+console.log(isNumber(NaN))
+console.log('Kiểm tra chuỗi')
+console.log(isString(100))
+console.log(isString('100'))
+console.log(isString(NaN))
