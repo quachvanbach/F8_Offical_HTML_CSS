@@ -1,0 +1,1 @@
+// 3. for/of - Lặp qua value của đối tượng
