@@ -9,7 +9,7 @@ function User(firstName, lastName, age, address) {
     this.getName = function() {
         return `${this.firstName} ${this.lastName}`
     }
-}
+} 
 
 // Cách 2: 
 /*
