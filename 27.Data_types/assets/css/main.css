@@ -53,3 +53,8 @@ th,tr,td {
     padding: 0.3rem 3rem;
 
 }
+
+iframe {
+    width: 100%;
+    min-height: 500px;
+}

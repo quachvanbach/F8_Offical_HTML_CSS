@@ -24,3 +24,8 @@ ul {
     margin-top: 3rem;
     list-style: none;
 }
+
+iframe {
+    width: 100%;
+    height: 500px;
+}

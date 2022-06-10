@@ -42,3 +42,8 @@ table {
 div {
     margin-top: 3rem;
 }
+
+iframe {
+    width: 100%;
+    min-height: 500px;
+}
