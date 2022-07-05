@@ -310,10 +310,10 @@ console.log(isFinishSome)
 /* 
 Thực hành tạo phương thức mySome.ạo ra phương thức mySome hoạt động tương tự phương thức some2 và some.
  */
-Array.prototype.mySome = function(cb) {
+Array.prototype.mySome = function (cb) {
     var output = false;
     for (var index in this) {
-        if( this.hasOwnProperty(index)) {
+        if (this.hasOwnProperty(index)) {
             var result = cb(this[index], index, this)
             if (result) {
                 output = true;
@@ -359,22 +359,22 @@ console.log(numbers1.mySome(function (number, index, array) {
 
 
 
-    // TỰ ĐỊNH NGHĨA EVERY VỚI CALLBACK
+// TỰ ĐỊNH NGHĨA EVERY VỚI CALLBACK
 
-    Array.prototype.every2 = function (callback) {
-        var output = true;
-        for (var index in this) {
-            if (this.hasOwnProperty(index)) {
-                var result = callback(this[index], index, this)
-                if (!result) {
-                    output = false;
-                    break;
-                }
-
+Array.prototype.every2 = function (callback) {
+    var output = true;
+    for (var index in this) {
+        if (this.hasOwnProperty(index)) {
+            var result = callback(this[index], index, this)
+            if (!result) {
+                output = false;
+                break;
             }
+
         }
-        return output;
     }
+    return output;
+}
 
 var isFinishEvery = courses2.every2(function (course) {
     return course.coin > 680
@@ -385,7 +385,7 @@ console.log(isFinishEvery)
 Thực hành tạo phương thức myEvery:  tạo ra phương thức myEvery hoạt động tương tự phương thức every2 và every
  */
 
-Array.prototype.myEvery = function(cb) {
+Array.prototype.myEvery = function (cb) {
     var output = true;
     for (var index in this) {
         if (this.hasOwnProperty(index)) {
@@ -416,4 +416,87 @@ console.log(numbers2.myEvery(function (number, index, array) {
     return array.length % 2 === 0;
 })); // Output: true
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TỰ ĐỊNH NGHĨA PHƯƠNG THỨC REDUCE VỚI CALLBACK SỬ DỤNG FOR-IN
+
+var myArray = [1, 2, 3, [4, 5], 6, 7, [8, 9, 10]];
+
+var myNumberArray = [1, 2, 3, 4, 5];
+
+Array.prototype.myReduce = function (callback, output) {
+
+    for (var index in this) {
+        if (this.hasOwnProperty(index)) {
+            output = callback(output, this[index], index, this)
+        }
+    }
+    return output
+}
+
+
+var flatArray = myArray.myReduce(function (output, item) {
+    return output.concat(item)
+}, [])
+
+console.log(flatArray)
+
+
+var sum = myNumberArray.myReduce(function (total, number) {
+    return total + number
+}, 0)
+
+console.log(sum)
+
+
+
+
+
+
+
+
+
+
+
+
+var mangs = [01, 12, 012, 12, 13, 14, 85, 96 ,36, 17]
+
+Array.prototype.myFilter12 = function(callback) {
+    var output12 = [];
+    for (var index in this) {
+        if (this.hasOwnProperty(index)) {
+          var result12 = callback(this[index], index, this);
+          if (result12) {
+            return output12.push(this[index])
+          } 
+        }
+    }
+    return output12
+}
+
+var result_mang = mangs.myFilter12(function(mang) {
+    return mang === 12
+})
+
+console.log(result_mang)
+
+var result_mang1 = mangs.filter(function(mang) {
+    return mang === 12
+})
+
+console.log(result_mang1)
 

@@ -1,4 +1,4 @@
-const numbers = [1, 2, 3, 4, 5];
+const numbers = [];
 
 // Định nghĩa phương thức reduce2
 Array.prototype.reduce2 = function (callback, result) {
@@ -22,3 +22,10 @@ const result = numbers.reduce2((total, number, index, array) => {
 },)
 
 console.log(result)
+
+
+
+
+
+
+

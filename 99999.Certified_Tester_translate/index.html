@@ -11,7 +11,16 @@
     <link rel="stylesheet" href="./assets/css/respondsive.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,400;1,200&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
     <style>
+        html {
+            font-family: 'Gantari', sans-serif;
+            font-family: 'Roboto', sans-serif;
+        }
+
         div {
             text-align: center;
         }
@@ -21,16 +30,27 @@
             font-size: 5rem;
         }
 
-        input {
-            margin: 3rem 0;
-            padding: 1.5px;
-            width: 100%;
+        #result {
+            width: 80%;
+            margin: 30px auto;
+            text-align: left;
+            border-top: 10rem;
             font-size: 3rem;
         }
 
-        #result {
-            border-top: 10rem;
-            font-size: 3rem;
+        .box-input {
+            margin: 0 auto;
+            width: 80%;
+            height: 300px;
+
+        }
+
+        textarea {
+            font-family: 'Gantari', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+            height: 100%;
+            font-size: 2rem;
         }
     </style>
 </head>
@@ -45,12 +65,15 @@
             var div = document.getElementById("result");
 
             // Gán nội dung ô input vào thẻ div
-            div.innerHTML = input.value;
+            div.innerText = input.value;
+            console.log(input.getAttribute('value'))
         }
     </script>
     <div>
         <h1>Certified Tester Foundation Level (CTFL) Syllabus</h1>
-        <input type="text" id="message" value="" onkeyup="show_result()" />
+        <div class="box-input">
+            <textarea type="text" id="message" value="" onkeyup="show_result()"></textarea>
+        </div>
         <div id="result"></div>
     </div>
     <script src="./assets/js/main.js"></script>

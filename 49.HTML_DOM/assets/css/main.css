@@ -22,7 +22,6 @@ strong {
 
 
 h1{
-    margin-top: 10rem;
     font-size: 3rem;
 }
 
@@ -67,8 +66,8 @@ table, th, td {
 
 
 
-p.numerical-order-extra {
-
+div {
+    margin-top: 5rem;
 }
 
 iframe {
