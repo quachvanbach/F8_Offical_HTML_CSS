@@ -28,7 +28,7 @@ var headingNode21 = document.getElementsByTagName('h1')[0];
 console.log(headingNode2);
 console.log(headingNode21);
 
-// Ví dụ: Get qua CSS sellector
+// Ví dụ: Get qua CSS selector
 var headingNode3 = document.querySelector('.headings')
 console.log(headingNode3);
 var headingNode4 = document.querySelectorAll('.headings')
@@ -180,3 +180,4 @@ function render(courses) {
     return coursesList.innerHTML = courseString;
 }
 render(courses);
+
