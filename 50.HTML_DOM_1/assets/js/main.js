@@ -190,7 +190,9 @@ inputText5.onkeyup = function (e) {
 
 //DOM EVENT II
 // 1. preventDefalt: Loại bỏ hành vi mặc định của HTML
-// Example 1: 
+// Example 1:
+
+
 var aElement = document.links;
 for (var i = 0; i < aElement.length; ++i) {
     aElement[i].onclick = function (e) {
@@ -221,3 +223,52 @@ document.querySelector('.stopPropagation button').onclick = function (e) {
     e.stopPropagation()
     console.log(e.target.innerText)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EVENTS LISTENER
+- Xử lý nhiều việc khi 1 event xảy ra.
+- Lắng nghe / Huỷ bỏ lắng nghe.
+*/
+
+var listenerButton = document.getElementById('listener__button');
+
+
+
+function viec4() {
+    console.log('Event 4');
+}
+
+function viec5() {
+    console.log('Event 5');
+}
+
+// addEventListener
+listenerButton.addEventListener('click', function (e) {
+
+    console.log('Event 1');
+
+    console.log('Event 2');
+
+    console.log('Event 3');
+})
+
+listenerButton.addEventListener('click', viec4);
+listenerButton.addEventListener('click', viec5)
+
+
+// removeEventListener
+setTimeout(function () {
+    listenerButton.removeEventListener('click', viec4)
+}, 3000)
+
