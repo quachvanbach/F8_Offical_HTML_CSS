@@ -64,6 +64,7 @@ console.log(boxElement.classList.contains('green'));
 
 // remove: xoá bỏ 1 class khỏi Element.
 boxElement.classList.remove('bold');
+boxElement.classList.remove('green');
 
 // toggle: Nếu 1 class đang có trong Element thì nó sẽ xoá bỏ class đó. Còn nếu không có class đó thì nó sẽ thêm class đó vào Element.
 boxElement.classList.toggle('blue');
@@ -271,4 +272,6 @@ listenerButton.addEventListener('click', viec5)
 setTimeout(function () {
     listenerButton.removeEventListener('click', viec4)
 }, 3000)
+
+
 
