@@ -41,26 +41,25 @@ function handleDeleteCourse(id) {
         .then(function (response) {
             response.json();
         })
-        
+
         // .then(callback)
 
         // .then(function () {
         //     getCourses(renderCourses);
         // }) ---> Dùng hàm này thay cho < .then(callback) > khi không tự load lại trang.
-       
+
         .then(function () {
             var courseItem = document.querySelector('.course-item-' + id)
             if (courseItem) {
                 courseItem.remove();
             }
         })
-        
+
 }
 
 function renderCourses(courses) {
     var listCoursesBlock = document.querySelector('#list-course');
     var htmls = courses.map(function (course) {
-
         return `
         <li class="course-item-${course.id}">
             <h3>${course.name}</h3>

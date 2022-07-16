@@ -1,0 +1,94 @@
+{
+  "title": [
+    {
+      "id": "STT",
+      "name": "Ho Va Ten",
+      "birth": "Ngay sinh",
+      "score1": "Diem mon 1",
+      "score2": "Diem mon 2",
+      "score3": "Diem mon 3"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Bui Thi Thuy Huong",
+      "birth": "23/06/2003",
+      "score1": 8.5,
+      "score2": 9.5,
+      "score3": 9.75
+    },
+    {
+      "name": "Bui Thi Hong Nu",
+      "birth": "12/05/2002",
+      "score1": "8",
+      "score2": "9.5",
+      "score3": "10",
+      "id": 2
+    },
+    {
+      "name": "Quach Van Bach",
+      "birth": "12/03/1995",
+      "score1": "10",
+      "score2": "10",
+      "score3": "10",
+      "id": 3
+    },
+    {
+      "id": 5,
+      "name": "1233213213123",
+      "birth": "asdasda",
+      "score1": "asdasd21312",
+      "score2": "asd",
+      "score3": "asd"
+    },
+    {
+      "name": "",
+      "birth": "",
+      "score1": "",
+      "score2": "",
+      "score3": "",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "asdad",
+      "birth": "asdasd",
+      "score1": "asdasdas",
+      "score2": "asdas",
+      "score3": "dasdasd"
+    },
+    {
+      "id": 8,
+      "name": "dsadsa123213",
+      "birth": "asdasd21313",
+      "score1": "asdasd",
+      "score2": "asdas12312123",
+      "score3": "dasd"
+    },
+    {
+      "name": "sadas",
+      "birth": "dasd",
+      "score1": "asdad",
+      "score2": "asdasdad",
+      "score3": "asdasd",
+      "id": 9
+    },
+    {
+      "name": "sadas",
+      "birth": "sadasd",
+      "score1": "saddas",
+      "score2": "dasdasdw",
+      "score3": "dsadasd",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "name": "asd2sad2dsa2`asdsadas",
+      "birth": "feqwrsadas",
+      "score1": "f42",
+      "score2": "dasd",
+      "score3": "13edasdas"
+    }
+  ]
+}
