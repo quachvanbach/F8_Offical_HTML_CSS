@@ -14,35 +14,17 @@ function getElementByName(name) {
 }
 
 // READ
-gethtmllTitleAsync();
-// htmlsStudent(student)
-// htmlsTitle()
-// getTable();
+drawTable()
 
-const sleep = (milliseconds) => {
-    return new Promise(resolve => setTimeout(resolve, milliseconds))
-  }
-async function gethtmllTitle() 
-{
-  let response = await htmlsTitle();
-  await sleep(5000);
-  let data = await response;
-console.log("------");
-console.log(response);
-  return data;
-}
+async function getHtmlTitleAsync() {
+    let response = await fetch(urlApiTitle,)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (titles) {
 
-async function gethtmllTitleAsync() 
-{
-  let response = await  fetch(urlApiTitle,)
-  .then(function (response) {
-      console.log("o day a");
-      return response.json();
-  })
-  .then(function (titles) {
-      
-      var htmls = titles.map(function (title) {
-          return `<tr>
+            var htmls = titles.map(function (title) {
+                return `<tr>
       <th>${title.id}</th>
       <th>${title.name}</th>
       <th>${title.birth}</th>
@@ -50,27 +32,30 @@ async function gethtmllTitleAsync()
       <th>${title.score2}</th>
       <th>${title.score3}</th>
       <th colspan="2">Action</th>`    })
-      
-      console.log(htmls);
-      return htmls;
-  });
 
-  let data = await response;
-  return data;
+            return htmls;
+        });
+
+    let data = await response;
+    return data;
+}
+
+// ve bang
+async function drawTable() {
+    const tableTitle = await getHtmlTitleAsync(); // cho async goi xong
+    const tableBody = await htmlsStudent(student); // cho async goi xong
+    studentListTable.innerHTML = tableTitle + tableBody;
 }
 function htmlsTitle() {
-        fetch(urlApiTitle,)
-            .then(function (response) {
-                console.log("o day a");
-                return response.json();
-            })
-            // .then(function (data) {
-            //     return data;
-            // })
-            .then(function (titles) {
-                
-                var htmls = titles.map(function (title) {
-                    return `<tr>
+    fetch(urlApiTitle)
+        .then(function (response) {
+            console.log("o day a");
+            return response.json();
+        })
+        .then(function (titles) {
+
+            var htmls = titles.map(function (title) {
+                return `<tr>
                 <th>${title.id}</th>
                 <th>${title.name}</th>
                 <th>${title.birth}</th>
@@ -78,35 +63,22 @@ function htmlsTitle() {
                 <th>${title.score2}</th>
                 <th>${title.score3}</th>
                 <th colspan="2">Action</th>`    })
-                
-                console.log(htmls);
-                return htmls.join('');
-            })
-    }
 
-function htmlsStudent(callback) {
-    fetch(urlApiStudents)
+            return htmls.join('');
+        })
+}
+
+async function htmlsStudent(callback) {
+    let response = await fetch(urlApiStudents)
         .then(function (response) {
             return response.json();
         })
-        .then(callback)
+        .then(callback);
+    let data = await response;
+    return data;
 }
 
-async function gethtmlsStudent() 
-{
-  let response = await fetch(urlApiStudents)
-  .then(function (response) {
-      return response.json();
-  })
-  .then(callback);
-  let data = await response;
-  return data;
-}
-
-// }
-
-
-function student(students) {
+async function student(students) {
     var htmls = students.map(function (student) {
         return `<tr>
         <td>${student.id}</td>
@@ -120,12 +92,7 @@ function student(students) {
         </tr>`
     })
     return htmls;
-
-//     var titleHtml = gethtmllTitleAsync()
-//   .then(data => studentListTable.innerHTML = data).then(data => studentListTable.innerHTML = htmls.join(studentListTable.innerHTML));
-    
 }
-
 
 // CREATE
 function createStudent(studentInfo, getInfo) {
@@ -140,7 +107,6 @@ function createStudent(studentInfo, getInfo) {
         })
         .then(getInfo);
 }
-
 
 function handleCreateForm(id) {
     handlerStudentBtn.onclick = function () {
@@ -164,7 +130,6 @@ function handleCreateForm(id) {
 }
 
 // PUT / PATCH
-
 function handleEditStudent(id) {
     handlerStudentBtn.textContent = 'Save';
     fetch(urlApiStudents + '/' + id)
@@ -208,8 +173,6 @@ function handleEditStudent(id) {
 }
 
 
-
-
 // DELETE
 function handleDeleteStudent(id) {
     var options = {
@@ -225,8 +188,6 @@ function handleDeleteStudent(id) {
             console.log(data);
         })
 }
-
-
 
 // Event press Enter
 var formInput = document.getElementsByClassName('form-input');
