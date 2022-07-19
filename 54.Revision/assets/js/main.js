@@ -5,7 +5,6 @@ var handlerStudentBtn = document.querySelector('#handler-student-btn');
 
 function start() {
     getElementByName
-    handleCreateForm()
 }
 
 start()
@@ -17,7 +16,7 @@ function getElementByName(name) {
 drawTable()
 
 async function getHtmlTitleAsync() {
-    let response = await fetch(urlApiTitle,)
+    let response = await fetch(urlApiTitle)
         .then(function (response) {
             return response.json();
         })
@@ -31,7 +30,7 @@ async function getHtmlTitleAsync() {
       <th>${title.score1}</th>
       <th>${title.score2}</th>
       <th>${title.score3}</th>
-      <th colspan="2">Action</th>`    })
+      <th colspan="2">Action</th>`})
 
             return htmls;
         });
@@ -46,27 +45,27 @@ async function drawTable() {
     const tableBody = await htmlsStudent(student); // cho async goi xong
     studentListTable.innerHTML = tableTitle + tableBody;
 }
-function htmlsTitle() {
-    fetch(urlApiTitle)
-        .then(function (response) {
-            console.log("o day a");
-            return response.json();
-        })
-        .then(function (titles) {
+// function htmlsTitle() {
+//     fetch(urlApiTitle)
+//         .then(function (response) {
+//             console.log("o day a");
+//             return response.json();
+//         })
+//         .then(function (titles) {
 
-            var htmls = titles.map(function (title) {
-                return `<tr>
-                <th>${title.id}</th>
-                <th>${title.name}</th>
-                <th>${title.birth}</th>
-                <th>${title.score1}</th>
-                <th>${title.score2}</th>
-                <th>${title.score3}</th>
-                <th colspan="2">Action</th>`    })
+//             var htmls = titles.map(function (title) {
+//                 return `<tr>
+//                 <th>${title.id}</th>
+//                 <th>${title.name}</th>
+//                 <th>${title.birth}</th>
+//                 <th>${title.score1}</th>
+//                 <th>${title.score2}</th>
+//                 <th>${title.score3}</th>
+//                 <th colspan="2">Action</th>`    })
 
-            return htmls.join('');
-        })
-}
+//             return htmls.join('');
+//         })
+// }
 
 async function htmlsStudent(callback) {
     let response = await fetch(urlApiStudents)
@@ -121,56 +120,55 @@ function handleCreateForm(id) {
             birth: birth,
             score1: score1,
             score2: score2,
-            score3: score3,
-
+            score3: score3
         };
         createStudent(formData)
         return formData
     }
 }
+handleCreateForm()
+// // PUT / PATCH
+// function handleEditStudent(id) {
+//     handlerStudentBtn.textContent = 'Save';
+//     fetch(urlApiStudents + '/' + id)
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function (data) {
+//             getElementByName('name').value = data.name;                 // var name = document.querySelector('input[name = name]');
+//             getElementByName('birth').value = data.birth;               // var birth = document.querySelector('input[name = birth]');
+//             getElementByName('score1').value = data.score1;             // var score1 = document.querySelector('input[name = score1]');
+//             getElementByName('score2').value = data.score2;             // var score2 = document.querySelector('input[name = score2]');
+//             getElementByName('score3').value = data.score3;             // var score3 = document.querySelector('input[name = score3]');
+//         })
+//         .then(function () {
+//             handlerStudentBtn.onclick = function () {
+//                 var name = getElementByName('name').value;
+//                 var birth = getElementByName('birth').value;
+//                 var score1 = getElementByName('score1').value;
+//                 var score2 = getElementByName('score2').value;
+//                 var score3 = getElementByName('score3').value;
 
-// PUT / PATCH
-function handleEditStudent(id) {
-    handlerStudentBtn.textContent = 'Save';
-    fetch(urlApiStudents + '/' + id)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            getElementByName('name').value = data.name;                 // var name = document.querySelector('input[name = name]');
-            getElementByName('birth').value = data.birth;               // var birth = document.querySelector('input[name = birth]');
-            getElementByName('score1').value = data.score1;             // var score1 = document.querySelector('input[name = score1]');
-            getElementByName('score2').value = data.score2;             // var score2 = document.querySelector('input[name = score2]');
-            getElementByName('score3').value = data.score3;             // var score3 = document.querySelector('input[name = score3]');
-        })
-        .then(function () {
-            handlerStudentBtn.onclick = function () {
-                var name = getElementByName('name').value;
-                var birth = getElementByName('birth').value;
-                var score1 = getElementByName('score1').value;
-                var score2 = getElementByName('score2').value;
-                var score3 = getElementByName('score3').value;
+//                 var putInfo = {
+//                     id: id,
+//                     name: name,
+//                     birth: birth,
+//                     score1: score1,
+//                     score2: score2,
+//                     score3: score3,
+//                 }
+//                 fetch(urlApiStudents + '/' + id, {
+//                     method: 'PUT',
+//                     headers: { 'Content-Type': 'application/json' },
+//                     body: JSON.stringify(putInfo)
+//                 })
 
-                var putInfo = {
-                    id: id,
-                    name: name,
-                    birth: birth,
-                    score1: score1,
-                    score2: score2,
-                    score3: score3,
-                }
-                fetch(urlApiStudents + '/' + id, {
-                    method: 'PUT',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(putInfo)
-                })
-
-                    .then(function (response) {
-                        return response.json();
-                    });
-            }
-        })
-}
+//                     .then(function (response) {
+//                         return response.json();
+//                     });
+//             }
+//         })
+// }
 
 
 // DELETE
@@ -191,7 +189,7 @@ function handleDeleteStudent(id) {
 
 // Event press Enter
 var formInput = document.getElementsByClassName('form-input');
-console.log(formInput);
+// console.log(formInput);
 for (var i = 0; i < formInput.length; i++) {
     formInput[i].onkeyup = function (e) {
         switch (e.which) {

@@ -30,31 +30,41 @@
 </head>
 
 <body>
-    <table id="list-student">
-    </table>
-    <div class = "container-form">
+    <table id="list-student"></table>
+    <div class="container-form">
         <div>
             <label>Ho & Ten</label>
-            <input class = "form-input"  type="text" name="name">
-        </div>        <div>
-            <label>Ngay sinh</label>
-            <input class = "form-input" type="text" name="birth">
-        </div>        <div>
-            <label>Diem mon 1</label>
-            <input class = "form-input" type="text" name="score1">
-        </div>        </div>        <div>
-            <label>Diem mon 2</label>
-            <input class = "form-input" type="text" name="score2">
-        </div>        </div>        <div>
-            <label>Diem mon 3</label>
-            <input class = "form-input" type="text" name="score3">
+            <input class="form-input" type="text" name="name">
         </div>
-        <div><button id="handler-student-btn">Add</button></div>
-    </div> 
- 
+        <div>
+            <label>Ngay sinh</label>
+            <input class="form-input" type="date" name="birth">
+        </div>
+        <div>
+            <label>Diem mon 1</label>
+            <input class="form-input" type="number" min="1" max="10" name="score1">
+        </div>
+    </div>
+    <div>
+        <label>Diem mon 2</label>
+        <input class="form-input" type="number" min="1" max="10" name="score2">
+    </div>
+    </div>
+    <div>
+        <label>Diem mon 3</label>
+        <input class="form-input" type="number" min="1" max="10" name="score3">
+    </div>
+    <div><button id="handler-student-btn">Add</button></div>
+    </div>
+
     <iframe src="./assets/js/main.js" frameborder="1"></iframe>
 
     <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
+
+
+
+
+

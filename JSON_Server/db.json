@@ -1,9 +1,0 @@
-{
-  "courses": [
-    {
-      "name": "LM Theme | Cách tạo theme VSCode và Publish lên Marketplace",
-      "description": "Xin chào các anh chị ở F8, em 2K7 ở đây chắc cũng không có ai nhỏ hơn nên em xin phép xưng em ạ. Vì bây giờ đã nghỉ hè rồi nên bắt đầu t ìm hiểu HTML CSS. Em ngoi lên để giới thiệu về sản phẩm đầu tiên của mình, không phải là một website mà là một extension.\n\nChắc có nhiều người cũng giống em, thích dùng các Theme bên ngoài hơn là dùng Dark ++ (theme mặc định của VSCode). Nhưng hầu hết các theme đều có điểm là mình không vừa mắt, được chỗ này mất chỗ kia.\n\nVì thế em quyết tâm làm bằng được 1 theme cho riêng mình. Thế là em bắt đầu tìm đọc hướng dẫn và video của một số LTV nước ngoài (ở Việt Nam mình hầu như không ai hướng dẫn chi tiết về cái này). Sau mấy ngày vật vã em đã tạo được LM Theme. Mọi người tải và cho em xin nhận ạ, nếu thấy hợp có thể dùng luôn 😄😄\n\nLink: LM Theme\n\nTheme này là em lấy ý tưởng từ Dracula Official.\n\nEm cũng không thấy bài hướng dẫn chi tiết từ A-Z nào mà hướng dẫn tạo Theme VSCode. Nên em đã viết ra đủ các bước làm ở dưới, làm như nào em viết lại y hệt vậy. Những ai mà khó tính hay muốn có Theme riêng thì làm theo nhe, không thì dùng luôn LM Theme ủng hộ em nha :3",
-      "id": 1
-    }
-  ]
-}
