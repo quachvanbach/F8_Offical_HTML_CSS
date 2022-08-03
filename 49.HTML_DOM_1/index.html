@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM: DOM CSS, DOM Classlist, DOM Events, Event Listener</title>
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/respondsive.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        .dom-css {
+            background-color: rgb(236, 184, 184);
+        }
+
+        .red {
+            color: red;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        .box-1 {
+            background-color: #777;
+            color: green;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 5rem;
+        }
+
+        .dom-event {
+            text-align: center;
+            margin: 0 auto;
+            background-color: rgb(108, 146, 111);
+        }
+
+        button {
+            background-color: #f05123;
+            padding: 9px 16px;
+            border-radius: 30px;
+            border: none;
+        }
+
+        input {
+            display: block;
+            margin: 20px auto;
+        }
+
+        .dom-event-example {
+            background-color: rgb(236, 159, 166);
+            width: 500px;
+            height: 500px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .preventDefault {
+            background-color: rgb(123, 177, 123);
+            width: 500px;
+            height: 500px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .stopPropagation {
+            background-color: rgb(192, 169, 245);
+            width: 500px;
+            height: auto;
+            margin: 30px auto;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .stopPropagation button {
+            display: block;
+            width: 300px;
+            height: 100px;
+            margin: auto;
+            font-size: 50px;
+        }
+
+        .event-listener{
+            background-color: rgb(192, 169, 245);
+            width: 500px;
+            height: auto;
+            margin: 30px auto;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .event-listener > button {
+            margin: auto;
+            top: 200px;
+            left: 100px;
+            display: block;
+            width: 300px;
+            height: 100px;
+            font-size: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="dom-css dom-class-list">
+        <div class="box">
+            <h1>DOM CSS & CLASS LIST</h1>
+        </div>
+        <div class="box-1">
+            <h2>Chữ nhấp nháy</h2>
+        </div>
+        <div class="box-list">
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+        </div>
+    </div>
+
+    <div class="dom-event">
+        <h1>DOM EVENTS</h1>
+        <h1 onclick="console.log(this.innerText)">Click event ( Attribute events )</h1>
+        <h1 onmouseover="console.log(this.innerText)">Hover event ( Attribute events )</h1>
+        <h1 onmouseout="console.log(this.innerText)">Mouseout event ( Attribute events )</h1>
+
+
+        <h1 class="headingEvent">Click event ( Assign event using the element node )</h1>
+
+        <button>Submit</button>
+
+    </div>
+    <div class="dom-event-example">
+        <input type="text">
+        <input type="text-1">
+        <input type="checkbox">
+        <select name="" id="">
+            <option value="Value 1">In ra Value 1</option>
+            <option value="Value 2">In ra Value 2</option>
+            <option value="Value 3">In ra Value 3</option>
+        </select>
+        <input type="text-2">
+        <input type="text-3">
+        <input type="text-4">
+        <input type="text-5">
+
+    </div>
+
+    <div class="preventDefault">
+        <a href="http://google.com/">Google</a>
+        <a href="http://facebook.com">Facebook</a>
+
+        <input placeholder="Tìm kiếm">
+        <ul>
+            <li>Javascript</li>
+            <li>PHP</li>
+            <li>HTML, CSS</li>
+        </ul>
+    </div>
+
+    <div class="stopPropagation" value="Box">
+        Box
+        <button value="Box">
+            Button
+        </button>
+    </div>
+
+    <div class="event-listener">
+        <button id="listener__button">Click me</button>
+
+    </div>
+
+    <iframe src="./assets/js/main.js" frameborder="1"></iframe>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html> 

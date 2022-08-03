@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các kiểu dữ liệu trong JS</title>
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/respondsive.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="primitive">
+        <h1>I. Primitive (Dữ liệu nguyên thuỷ)</h1>
+        <table>
+            <tr>
+                <th>Kiểu dữ liệu</th>
+                <th>Ý nghĩa</th>
+                <th>Ví dụ</th>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td>Kiểu số</td>
+                <td>
+                    <p>var a = 1;</p>
+                    <p>var b = 2;</p>
+                    <p>var c = 3;</p>
+                </td>
+            </tr>
+            <tr>
+                <td>String</td>
+                <td>Kiểu chuỗi</td>
+                <td>
+                    <p>var lastName = 'Bach';</p>
+                    <p>var firstNam = 'Quach';</p>
+                    <p>var fullName = 'Quach Van Bach';</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Boolean</td>
+                <td>Thể hiện giá trị True hoặc False</td>
+                <td>
+                    <p>var isSuccess = true;</p>
+                    <p>var isFalse = false;</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Underfined</td>
+                <td>Khi chỉ khai báo biến nhưng không truyền giá trị</td>
+                <td>
+                    <p>var name;</p>
+                    <p>var age;</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Null</td>
+                <td>Thể hiện không có gì, không có gì xảy ra</td>
+                <td>var isNull = null</td>
+            </tr>
+            <tr>
+                <td>Symbol</td>
+                <td>Kiểu dữ liệu có đặc tính unique. Dùng trong trường hợp đặc biệt. ( Học trong khoá nâng cao)</td>
+                <td>
+                    <p>var id = Symbol('id');</p>
+                    <p>var id = Symbol('id');</p>
+                </td>
+            </tr>
+
+            
+
+        </table>
+
+    </div>
+
+    <div class="complex">
+        <h1>Complex Data (Kiểu dữ liệu phức tạp)</h1>
+        <table>
+            <tr>
+                <th style="width: 20%" colspan="2">Kiểu dữ liệu</th>
+                <th style="width: 30%">Ý nghĩa</th>
+                <th style="width: 30%">Ví dụ</th>
+                <th style="width: 20%" width="fit-content">Gọi ra giá trị</th>
+            </tr>
+            <tr>
+                <td colspan="2">Function</td>
+                <td>Function chỉ được thực thi khi ta gọi đến nó.</td>
+                <td>
+                    var myFunction = function() { <br>
+                    alert('Hello world') <br>
+                    }
+                </td>
+                <td>myFunction()</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Object</td>
+                <td>Object</td>
+                <td>Truyền vào được nhiều cặp giá trị có cú pháp: key: 'value' . Các cặp giá trị cách nhau bằng dấu phẩy, hoặc có thể truyền vào 1 function</td>
+                <td>var myObject = { <br>
+                    key: 'value', <br>
+                    name: 'Bach', <br>
+                    age: '27', <br>
+                    myFunction: function() { <br>
+                    }
+                </td>
+                <td>console.log(myObject)</td>
+            </tr>
+            <tr>
+                <td>Array</td>
+                <td>Truyền vào 1 danh sách các giá trị. Key sẽ được đánh tự động theo thứ tự tăng dần.</td>
+                <td>var myArray = [ <br>
+                    'Javascript' <br>
+                    'PHP' <br>
+                    'Ruby' <br>
+                    ]</td>
+                <td>console.log(myArray)</td>
+            </tr>
+        </table>
+    </div>
+    <h1>Cách để kiểm tra kiểu dữ liệu</h1>
+    <h2>console.log(typeof <em>variable</em>) </h2>
+
+    <iframe src="./assets/js/main.js" frameborder="0"></iframe>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

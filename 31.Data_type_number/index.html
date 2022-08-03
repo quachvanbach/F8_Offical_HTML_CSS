@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểu dữ liệu số (Number)</title>
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/respondsive.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+
+<body>
+    <h1>Hàm kiểm tra kiểu dữ liệu chuỗi đơn giản nhất. Không áp dụng với number. Vì với cách này thì khi giá trị đưa vào
+        là NaN thì kết quả vấn sẽ trở về true</h1>
+    <p><em>function isNumber(value) { <br>
+            return typeof value === 'string'; <br>
+            }</em></p>
+
+    <h1>Hàm kiểm tra dữ liệu số: </h1>
+    <p><em>function isNumber (value) { <br>
+            if (Number.isFinite(value)){ <br>
+            return true ; <br> 
+            }else { <br>
+            return false; <br>
+            } <br>
+            }</em></p>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

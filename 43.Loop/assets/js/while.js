@@ -1,1 +1,0 @@
-// 4. while - Lặp khi điều kiện đúng

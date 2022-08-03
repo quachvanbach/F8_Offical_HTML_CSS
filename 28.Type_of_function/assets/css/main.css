@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 1200px;
+    margin: 0 auto 20rem;
+}
+
+strong {
+    color: red;
+    margin-right: 5rem;
+}
+
+
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    margin-left: 2rem;
+    font-size: 3.5rem
+}
+
+h3 {
+    margin-left: 3rem;
+    font-size: 3rem;
+}
+
+p{
+    font-size: 2.5rem;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 2rem auto;
+}
+
+div {
+    margin-top: 3rem;
+}
+
+.function {
+    margin-bottom: 4rem;
+    border: 1px solid blue;
+    padding: 1rem;
+    font-style: italic;
+    color: rgb(129, 124, 124);
+}

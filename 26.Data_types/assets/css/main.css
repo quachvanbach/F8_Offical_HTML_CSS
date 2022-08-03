@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    width: 1200px;
+    margin: 3rem auto;
+    font-size: 2.5rem;
+    }
+    
+    strong {
+        color: red;
+        margin-right: 5rem;
+    }
+    
+    h1{
+        font-size: 4rem;
+    }
+    
+    h2{
+        margin-left: 2rem;
+        font-size:3.5rem
+    }
+    
+    h3{
+        margin-left: 3rem;
+        font-size:3rem;
+    }
+    
+    
+table {
+    border-collapse: collapse;
+    margin: 2rem auto;
+}
+
+div{
+    margin-top: 3rem;
+}
+
+.short-name{
+    text-align: center;
+}
+
+th,tr,td {
+    border: 1px solid #666;
+    padding: 0.3rem 3rem;
+
+}
+
+iframe {
+    width: 100%;
+    min-height: 500px;
+}
